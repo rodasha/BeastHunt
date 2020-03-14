@@ -70,7 +70,7 @@
                function Start(){timer1=setInterval("Down()",1000);}
                function Stop(){
                     clearInterval(timer1);
-                    var answer=document.timer.elements[1].value;
+                    var answer=document.timer.elements[2].value;
                     if(answer==tx)alert("正解!すっごーい!");else alert("不正解！答えは"+tx+"でした!");
                     window.location.reload();
                }
@@ -84,10 +84,10 @@
                     }}
           </script>
           <form name="timer">
-               あと<input type="text" value="50" readonly>秒<br>
+               あと<input type="text" value="50" readonly>秒
+               <input type="button" value="リセット" onclick="window.location.reload();"><br>
                隠れている動物は？<input type="text">
                <input type="button" value="決定" onclick="Stop()"> 
-               <input type="button" value="リセット" onclick="window.location.reload();">
           </form>
      </body>
 </html>
